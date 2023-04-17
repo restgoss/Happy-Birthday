@@ -1,0 +1,172 @@
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("Inter-Regular.woff2?v=3.19") format("woff2"),
+        url("Inter-Regular.woff?v=3.19") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("Inter-Medium.woff2?v=3.19") format("woff2"),
+        url("Inter-Medium.woff?v=3.19") format("woff");
+}
+
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("Inter-Black.woff2?v=3.19") format("woff2"),
+        url("Inter-Black.woff?v=3.19") format("woff");
+}
+
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #fcf0e4;
+}
+
+.paragraph {
+    padding: 15px;
+}
+
+.main-block {
+    font-family: 'Inter';
+    text-align: center;
+    display: flex;
+    margin: 50px auto auto auto;
+    flex-direction: column;
+    width: 95%;
+    height: 400px;
+}
+
+.imgblck {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 15px 0 15px 0;
+}
+
+.btn-create {
+    align-self: center;
+    width: 75%;
+    height: 60px;
+    background-color: #eeda6c;
+}
+
+.img {
+    width: 100%;
+}
+
+.heading {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.popup-overlay {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    transition: opacity .3s linear, visibility .3s linear;
+}
+
+.active {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.popup {
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    margin: 0;
+    width: 95%;
+    height: min-content;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+
+.popup-img {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+}
+
+.popup-title {
+    width: 90%;
+    text-align: center;
+    margin: 15px auto 0 auto;
+}
+
+.popup-descr {
+    text-align: center;
+    padding: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: -35px;
+    right: 0px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url(./cross-icon.svg);
+    background-position: center;
+    width: 25px;
+    height: 25px;
+}
+
+.close-btn:hover {
+    opacity: 0.6;
+}
+
+.pspara {
+    font-family: 'Inter';
+    text-align: center;
+    font-size: 12px;
+    width: 75%;
+    margin: 15px auto 0 auto;
+}
+
+@media screen and (min-width: 680px) {
+    .btn-create {
+        width: 20%;
+        height: 100px;
+    }
+
+    .main-block {
+        height: 45%;
+        max-height: 700px;
+    }
+
+
+    .img {
+        width: 450px;
+    }
+
+    .popup {
+        width: 450px;
+    }
+}
